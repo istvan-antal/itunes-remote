@@ -28,9 +28,23 @@
         </div>
         <script src="lib/jquery/dist/jquery.min.js"></script>
         <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="lib/fastclick/lib/fastclick.js"></script>
         <script>
-            $('a').click(function (e) {
-                var url = $(this).attr('href');
+            window.addEventListener('load', function() {
+                FastClick.attach(document.body);
+            }, false);
+
+            $('a').click(function(e) {
+                var self = $(this),
+                        url = self.attr('href');
+
+                self.attr('href');
+
+                self.addClass('active');
+                setTimeout(function() {
+                    self.removeClass('active');
+                }, 150);
+
                 $.ajax({
                     url: url
                 });

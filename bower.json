@@ -1,16 +1,17 @@
 {
-    "name": "itunes-remote",
-    "version": "0.0.1",
-    "authors": [
-        "Antal István Miklós <istvan.m.antal@gmail.com>"
-    ],
-    "description": "inatal blog",
-    "license": "MIT",
-    "private": true,
-    "directory" : "views/lib",
-    "dependencies": {
-        "jquery": "2.0.3",
-        "bootstrap": "3.0.3",
-        "font-awesome": "4.0.3"
-    }
+  "name": "itunes-remote",
+  "version": "0.0.1",
+  "authors": [
+    "Antal István Miklós <istvan.m.antal@gmail.com>"
+  ],
+  "description": "inatal blog",
+  "license": "MIT",
+  "private": true,
+  "directory": "views/lib",
+  "dependencies": {
+    "jquery": "2.0.3",
+    "bootstrap": "3.0.3",
+    "font-awesome": "4.0.3",
+    "fastclick": "~1.0.1"
+  }
 }
