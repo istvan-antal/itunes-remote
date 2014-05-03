@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iTunes Remote</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+        <style>
+            .btn {
+                padding: 1.5% 1.5%;
+                font-size: 600%;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="padding: 10px;">
+            <a class="btn btn-default" href="/prev">
+                <i class="fa fa-step-backward"></i>
+            </a>
+            <a class="btn btn-default" href="/playpause">
+                <i class="fa fa-play"></i>
+            </a>
+            <a class="btn btn-default" href="/next">
+                <i class="fa fa-step-forward"></i>
+            </a>
+        </div>
+        <script src="lib/jquery/dist/jquery.min.js"></script>
+        <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+            $('a').click(function (e) {
+                var url = $(this).attr('href');
+                $.ajax({
+                    url: url
+                });
+                e.preventDefault();
+            });
+        </script>
+    </body>
+</html>
